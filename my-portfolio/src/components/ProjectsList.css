@@ -1,3 +1,25 @@
 .projects-container {
-  margin: 50px;
+  margin: 0; /* 외부 여백 제거 */
+  padding: 0; /* 내부 여백 제거 */
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+}
+
+
+
+@media (max-width: 768px) {
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
 }

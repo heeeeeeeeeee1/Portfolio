@@ -1,5 +1,14 @@
 .about-me-container {
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0; /* 외부 여백 제거 */
+  padding: 0; /* 내부 여백 제거 */
+  overflow: hidden; /* 내용 넘침 방지 */
+  background-color: white;
 }
 .about-me-container h2, p {
   text-align: center;
@@ -8,7 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px
+  gap: 20px;
 }
 .contact-links a {
   display: flex;
@@ -16,10 +25,10 @@
   gap: 8px;
   background-color: rgb(235,235,235);
   border-radius: 10px;
-  padding: 5px 15px;
-  /* 링크 클릭 후에도 밑줄, 색 변경 없도록 설정정 */
+  padding: 0px 15px;
+  box-shadow: 1px 3px 6px rgba(0,0,0,0.5);
 }
 .contact-links img {
-  width: 50px;
+  width: 40px;
   height: 50px;
 }

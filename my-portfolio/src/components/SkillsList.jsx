@@ -11,7 +11,7 @@ import './SkillsList.css'
 const SkillsList = () => {
   return (
     <div className="skills-container">
-      <h3>Skills</h3>
+      <h2>Skills & Tools</h2>
       <div className="skills-list">
         <img src={pythonImg} alt="python" />
         <img src={jsImg} alt="javascript" />
