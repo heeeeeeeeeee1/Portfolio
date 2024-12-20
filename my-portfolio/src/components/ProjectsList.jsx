@@ -1,33 +1,44 @@
-// 프로젝트 4개를 한 컴포넌트로 여러번 가져오려면?
-
-
-// 프로젝트 썸네일?
-// 제목
-// 태그 느낌으로 프로젝트 관련 정보 간략하게
-// 팀, 영화추천, vue, django 이런식으로
-import ProjectCard from "./ProjectCard"
-import projectImage from '../assets/basic-profile.png'
+import ProjectCard from './ProjectCard'
+import tickleyImg from '../assets/Tickley_thumbnail.png'
+import kikimovieImg from '../assets/Kikimovie_thumbnail.png'
+import howareyouImg from '../assets/How_are_you_thumbnail.png' 
+import squatImg from '../assets/squat_thumbnail.png'
+import './ProjectsList.css'
 
 const ProjectsList = () => {
   const projects =[
     {
       href: 'https://github.com/heeeeeeeeeee1/KIKI_MOVIE',
-      imgSrc: projectImage,
+      imgSrc: kikimovieImg,
       title: '키키무비',
       description: '모두를 위한, 특별하고 재미있는 영화추천 서비스',
       keyword: '팀, 영화추천, Vue, Django',
     },
     {
       href: 'https://heeeeeeeeeee1.github.io/How-are-you-feeling-today/',
-      imgSrc: '../assets/baisc-profile.png',
-      title: '프로젝트2',
-      description: '인사이드아웃을 테마로 한 투두리스트',
-      keyword: '솔로, 투두리스트, javascript',
+      imgSrc: howareyouImg,
+      title: 'How are you feeling today?',
+      description: '영화 인사이드아웃을 테마로 한 투두리스트',
+      keyword: '솔로, 투두리스트, Javascript',
+    },
+    {
+      href: 'https://github.com/Tickley-Team/Tickley?tab=readme-ov-file',
+      imgSrc: tickleyImg,
+      title: '티클리(Tickley)',
+      description: '당신의 소중한 자투리 시간을 효율적으로 관리할 수 있도록 도와주는 서비스',
+      keyword: '팀, 스프린트, 자투리 타이머, React, Javascript',
+    },
+    {
+      href: 'https://ripe-impatiens-86b.notion.site/162603fef9268149af5ecae453aa1d85?pvs=4/',
+      imgSrc: squatImg,
+      title: '딥러닝 모델을 활용한 스쿼트 자세교정 서비스',
+      description: 'CNN 모델을 활용한 스쿼트 평가등급 제공',
+      keyword: '팀, 헬스케어, 기획, Rasberry Pi, Python',
     },
   ]
 
   return (
-    <div>
+    <div className="projects-container">
       <h3>Projects</h3>
       <div className="projects-list">
         {projects.map((project, index) => (

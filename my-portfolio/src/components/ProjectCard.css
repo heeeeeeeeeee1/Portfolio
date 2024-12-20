@@ -1,0 +1,22 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  /* height: 100vh; */
+  margin: 20px 0;
+  padding: 5px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+}
+.project-link {
+  text-align: center;
+}
+
+.project-link img {
+  width: 100%;
+  /* 높이 설정은 안해도 될까 */
+  border-radius: 10px;
+  background-color: white;
+}

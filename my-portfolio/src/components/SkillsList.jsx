@@ -7,9 +7,10 @@ import vueImg from '../assets/VueJS-Light.svg'
 import jsImg from '../assets/javaScript.svg'
 import reactImg from '../assets/react.svg'
 import './SkillsList.css'
+
 const SkillsList = () => {
   return (
-    <div>
+    <div className="skills-container">
       <h3>Skills</h3>
       <div className="skills-list">
         <img src={pythonImg} alt="python" />

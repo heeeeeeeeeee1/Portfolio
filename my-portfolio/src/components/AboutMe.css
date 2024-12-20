@@ -1,0 +1,25 @@
+.about-me-container {
+  /* display: flex; */
+}
+.about-me-container h2, p {
+  text-align: center;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px
+}
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgb(235,235,235);
+  border-radius: 10px;
+  padding: 5px 15px;
+  /* 링크 클릭 후에도 밑줄, 색 변경 없도록 설정정 */
+}
+.contact-links img {
+  width: 50px;
+  height: 50px;
+}
