@@ -11,19 +11,52 @@ export default function Greeting(props) {
   const { nodes, materials } = useGraph(clone)
   const { actions } = useAnimations(animations, group)
 
-  // console.log(adtions) 했을 때 출력되는 값 확인 후 넣어주기기
+  // console.log(adtions) 했을 때 출력되는 값 확인 후 넣어주기
+  // 1안 : 계속 움직임
   useEffect(() => {
-    if (actions['Armature|mixamo.com|Layer0']) {
-      actions['Armature|mixamo.com|Layer0'].play()
-    }
+    actions['Armature|mixamo.com|Layer0'].play()
   }, [actions])
 
-  // useFrame(() => {
-  //   if (group.current) {
-  //     // group.current.position.y = -1 // 아바타를 아래로 이동
-  //     group.current.rotation.x = Math.PI / 6 // 아바타를 위쪽으로 회전
+  // 2안 : 버그?
+  // useEffect(() => {
+  //   const action = actions['Armature|mixamo.com|Layer0']
+  //   if (action) {
+  //     action.loop = false // 애니메이션 반복 비활성화 -> 2번? 인사하고 우측 바라봄ㅎ새로고침하면 무한 인사사
+  //     action.play() // 애니메이션 한 번 재생
   //   }
-  // })
+  // }, [actions])
+
+
+  // 3안 : 아바타 일정 시간 이후 멈추게 하기(동작으로 하려고 했는데 애초에 다운받은 아바타 액션 파일의 프레임이 조금 긴 느낌?)
+  // useEffect(() => {
+  //   const action = actions['Armature|mixamo.com|Layer0']
+  //   if (action) {
+  //     action.loop = false // 애니메이션 반복 비활성화
+  //     action.play() // 애니메이션 한 번 재생
+
+  //     // 애니메이션 종료 후 Y축을 0으로 설정
+  //     action.clampWhenFinished = true; // 마지막 프레임에서 멈추도록 설정
+
+  //     const animationDuration = 5; // 실제 애니메이션 길이에 맞게 조정
+
+
+  //     // 애니메이션이 끝날 때까지 대기
+  //     const timer = setTimeout(() => {
+  //       action.stop(); // 애니메이션 정지
+  //       group.current.rotation.y = 0; // Y축을 0으로 설정
+  //     }, animationDuration * 1000); // 밀리초로 변환
+
+  //     return () => clearTimeout(timer); // 컴포넌트 언마운트 시 타이머 정리
+  //   }
+  // }, [actions])
+
+
+  useFrame(() => {
+    if (group.current) {
+      // group.current.position.y = -1 // 아바타를 아래로 이동
+      group.current.rotation.y = 0.5
+    }
+  })
 
   return (
     <group ref={group} {...props} dispose={null}>

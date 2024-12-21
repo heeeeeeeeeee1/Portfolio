@@ -4,10 +4,12 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 5px;
-  background-color: rgb(235, 235, 235);
+  padding: 12px;
+  /* background-color: rgb(235, 235, 235); */
+  background-color: #262622;
   border-radius: 10px;
   box-shadow: 1px 3px 6px rgba(0,0,0,0.5);
+  min-height: 380px;
 }
 .project-link {
   text-align: center;
@@ -18,13 +20,15 @@
 }
 
 .project-image {
-  flex: 1;
+  /* flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding-top: 56.25%;
+  align-items: center; */
+  /* padding-top: 56.25%; */
   position:relative;
+  width: 100%;
+  padding-top: 60%;
+  margin-bottom: 10px;
 }
 .project-image img {
   position: absolute;
@@ -34,6 +38,52 @@
   height: 100%; /* 이미지가 부모 높이를 넘지 않도록 */
   object-fit: cover;
   border-radius: 10px;
-  background-color: white;
+}
+.text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3px;
+}
+.text h3 {
+  color: white;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  
+}
+.text p {
+  color: white;
+  margin: 10px 0;
+}
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 8px 0;
+}
+.keyword {
+  /* background-color: #262622; */
+  /* background-color: #C9D94E; */
+  background-color: rgba(201, 217, 78, 0.8);
+  /* color: white; */
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin: 0;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
 
+@media (max-width: 768px) {
+  .project-card {
+    min-height: 300px;
+    padding: 10px;
+  }
+  .text h3 {
+    font-size: 1.1rem;
+  }
+
+  .text p {
+    font-size: 0.9rem;
+  }
 }

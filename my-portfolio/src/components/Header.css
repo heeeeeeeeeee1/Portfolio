@@ -1,16 +1,18 @@
 .header {
   position: sticky;
   top: 0;
-  background-color: black;
+  background-color: #262622;
   padding: 1rem;
-  /* z-index: 100; */
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .header a {
-  margin-right: 1rem;
+  margin: 2px 15px;
   color: white;
 }
 
 .header a:hover {
-  color: #d3e974;
+  color: #C9D94E;
 }

@@ -25,7 +25,7 @@ const AboutMe = () => {
             <ambientLight intensity={0.1} />
             <directionalLight intensity={0.4} />
             <Greeting position={[0, -0.75, 0.5]} />
-            <OrbitControls enableZoom={false}/>
+            <OrbitControls enableRotate={false} enableZoom={false} enablePan={false} />
           </Canvas>
         </div>
         <div className='text-content'>
