@@ -25,7 +25,7 @@ const ProjectsList = () => {
       href: 'https://github.com/Tickley-Team/Tickley?tab=readme-ov-file',
       imgSrc: tickleyImg,
       title: '티클리(Tickley)',
-      description: '당신의 소중한 자투리 시간을 효율적으로 관리할 수 있도록 도와주는 서비스',
+      description: '당신의 소중한 자투리 시간을\n효율적으로 관리할 수 있도록 도와주는 서비스',
       keywords: ['팀', '스프린트', '자투리 타이머', 'React'],
     },
     {

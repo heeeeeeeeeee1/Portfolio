@@ -20,6 +20,10 @@
   padding: 0 16px;
 }
 
+.project-card p{
+  white-space: pre-wrap; /* 티클리 \n을 줄바꿈으로 처리 */
+}
+
 @media (max-width: 768px) {
   .projects-list {
     grid-template-columns: 1fr;
