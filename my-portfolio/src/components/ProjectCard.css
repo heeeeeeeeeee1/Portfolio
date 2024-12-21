@@ -11,6 +11,10 @@
   box-shadow: 1px 3px 6px rgba(0,0,0,0.5);
   min-height: 380px;
 }
+.project-card:hover {
+  /* background-color: rgba(0,0,0,0.7); */
+  transform: scale(1.05)
+}
 .project-link {
   text-align: center;
   width: 100%;
