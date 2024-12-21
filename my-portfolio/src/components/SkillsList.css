@@ -7,15 +7,54 @@
   padding: 0; /* 내부 여백 제거 */
   width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: #262622;
   color: white;
 }
-.skills-container h3 {
-  text-align: start;
+.skills-container h2 {
+  font-size: 1.65rem;
+}
+.skills-list {
+  display: flex;
+  /* 화면 좁아지면 같이 밀리게게 */
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+.skill-item {
+  position: realative;
+  margin: 5px;
 }
 .skills-list img {
-  /* display: flex; */
   width: 50px;
   height: 50px;
   margin: 10px;
+  filter: drop-shadow(1px 1px 2px rgb(255, 255, 255));
+  /* transform: scale(1); */
+  transition: transform 0.3s ease;
+}
+.skills-list img:hover {
+  transform: scale(1.2);
+}
+
+.skill-popup {
+  position: absolute;
+  /* top: -80px;
+  left: 50%; */
+  transform: translateX(-30%);
+  background-color: rgba(201, 217, 78, 0.8);
+  color: #262622;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+  /* 문장 두 줄 이상이면 줄바꿈*/
+  white-space: pre-wrap;
+}
+
+.skill-popup h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.skill-popup p {
+  margin: 5px 0 0;
+  font-size: 14px;
 }
