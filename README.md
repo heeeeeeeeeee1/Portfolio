@@ -1,7 +1,15 @@
 ## 자기소개 페이지
-[링크]
+### [포트폴리오 구경하기](https://my-portfolio-indol-nine-28.vercel.app/)
 
-1. 사용 기술
+</br>
+
+![썸네일](./my-portfolio//public/preview.png)
+#### 1. 안녕하세요🐣 프론트엔드 개발자를 꿈꾸는 박희원입니다.
+
+#### 2. 사용 기술 및 라이브러리
 - React
-- Javascript
+- Javascript(JSX)
 - Vite
+- Vercel
+- three.js
+
