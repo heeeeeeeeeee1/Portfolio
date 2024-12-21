@@ -12,7 +12,7 @@
 }
 .about-me-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 canvas {
@@ -20,8 +20,24 @@ canvas {
   height: 100%; /* 화면 전체를 사용 */
   display: block;
 }
-.about-me-container h2, p {
-  text-align: center;
+.text-content {
+  margin: 0;
+  padding: 0;
+}
+.keywords {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  gap: 15px; /* 키워드 사이의 간격 */
+}
+.text-content h2 {
+  font-size: 1.6rem;
+}
+.keywords p {
+  background-color: rgb(248, 179, 179);
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 1.2rem;
 }
 .contact-links {
   display: flex;
@@ -35,10 +51,18 @@ canvas {
   gap: 8px;
   background-color: rgb(235,235,235);
   border-radius: 10px;
-  padding: 0px 15px;
+  padding: 0px 5px;
   box-shadow: 1px 3px 6px rgba(0,0,0,0.5);
 }
-.contact-links img {
+/* .contact-links {
   width: 40px;
   height: 50px;
+} */
+.github {
+  width: 40px;
+  height: 50px;
+}
+.gmail {
+  width: 35px;
+  height: 46px;
 }

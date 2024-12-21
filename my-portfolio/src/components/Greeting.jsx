@@ -1,19 +1,29 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { useGraph } from '@react-three/fiber'
+import { useRef, useEffect, useMemo } from 'react'
+import { useGraph, useFrame } from '@react-three/fiber'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
+// import * as THREE from 'three'
 
 export default function Greeting(props) {
-  const group = React.useRef()
+  const group = useRef()
   const { scene, animations } = useGLTF('/greeting.glb')
-  const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
+  const clone = useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   const { actions } = useAnimations(animations, group)
-  console.log(actions)
+
+  // console.log(adtions) 했을 때 출력되는 값 확인 후 넣어주기기
   useEffect(() => {
-    actions['Armature|mixamo.com|Layer0'].play()
-  }, [])  
+    if (actions['Armature|mixamo.com|Layer0']) {
+      actions['Armature|mixamo.com|Layer0'].play()
+    }
+  }, [actions])
+
+  // useFrame(() => {
+  //   if (group.current) {
+  //     // group.current.position.y = -1 // 아바타를 아래로 이동
+  //     group.current.rotation.x = Math.PI / 6 // 아바타를 위쪽으로 회전
+  //   }
+  // })
 
   return (
     <group ref={group} {...props} dispose={null}>
