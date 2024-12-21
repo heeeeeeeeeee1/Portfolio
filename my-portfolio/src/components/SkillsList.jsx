@@ -5,8 +5,8 @@ import djangoImg from '../assets/Django.svg'
 import figmaImg from '../assets/Figma.svg'
 import htmlImg from '../assets/HTML.svg'
 import vueImg from '../assets/VueJS-Light.svg'
-import jsImg from '../assets/javaScript.svg'
-import reactImg from '../assets/react.svg'
+import jsImg from '../assets/JavaScript.svg'
+import reactImg from '../assets/React.svg'
 import './SkillsList.css'
 
 const skillsData = [
