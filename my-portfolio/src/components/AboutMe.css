@@ -18,12 +18,16 @@
 }
 canvas {
   width: 100%;
-  height: 100%; /* 화면 전체를 사용 */
+  height: 100%; /* 화면 전체 사용 */
   display: block;
 }
 .text-content {
-  margin: 0;
+  margin: 5px;
   padding: 0;
+}
+.text-content h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
 }
 .keywords {
   display: flex;
@@ -31,20 +35,35 @@ canvas {
   justify-content: center;
   gap: 15px; /* 키워드 사이의 간격 */
 }
-.text-content h2 {
-  font-size: 1.65rem;
-  font-weight: 600;
+.major {
+  /* background-color: #FB6E52; */
+  /* background-color: #CEE397; */
+  background-color: #F8A460;
+  
+  /* color: white; */
+}
+.learn {
+  background-color: #FED880;
+  /* background-color: #FFCE55; */
+}
+.interest {
+  /* background-color: #5D9CEC; */
+  /* background-color: #F8A460; */
+  background-color: #CEE397;
+  /* background-color: #9AB2D4; */
+  /* background-color: #5970ba; */
+  /* color: white; */
+
 }
 .keywords p {
   /* background-color: #B2BF4B; */
-  background-color: #C9D94E;
   border-radius: 10px;
   padding: 5px 10px;
   margin-top: 5px;
   margin-bottom: 15px;
   font-size: 1.15rem;
   font-weight: 500;
-  box-shadow: 1px 3px 6px rgba(0,0,0,0.5);
+  box-shadow: 1px 4px 7px rgba(0,0,0,0.6);
   /* color: white; */
 }
 .contact-links {
@@ -60,7 +79,7 @@ canvas {
   background-color: rgb(235,235,235);
   border-radius: 10px;
   padding: 0px 5px;
-  box-shadow: 1px 3px 6px rgba(0,0,0,0.5);
+  box-shadow: 1px 4px 7px rgba(0,0,0,0.5);
 }
 .contact-links a:hover{
   transform: scale(1.1);
@@ -73,4 +92,29 @@ canvas {
 .gmail {
   width: 35px;
   height: 46px;
+}
+
+
+@media (max-width: 768px) {
+  .about-me-content {
+    flex-direction: column; /* 세로 배치로 전환 */
+    flex-wrap: wrap;
+  }
+  .text-content h2 {
+    font-size: 1.2rem; /* 텍스트 크기 축소 */
+  }
+  .keywords p {
+    font-size: 0.8rem; /* 키워드 텍스트 축소 */
+    padding: 4px 8px;
+  }
+  .github, .gmail {
+    width: 30px;
+    height: 35px;
+  }
+  .contact-links {
+    flex-wrap: wrap; /* 작은 화면에서 줄바꿈 허용 */
+    gap: 10px;
+    margin: 5px;
+    padding-bottom: 50px;
+  }
 }

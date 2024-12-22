@@ -1,5 +1,6 @@
-body {
+html, body {
   font-family: 'S-CoreDream', sans-serif;
+  margin: 0;
 }
 
 a {

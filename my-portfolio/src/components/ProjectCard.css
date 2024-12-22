@@ -1,15 +1,17 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   padding: 12px;
-  /* background-color: rgb(235, 235, 235); */
   background-color: #262622;
   border-radius: 10px;
   box-shadow: 1px 3px 6px rgba(0,0,0,0.5);
-  min-height: 380px;
+  min-height: 400px;
+  position: relative;
+  padding-bottom: 40px;
+  padding-top: 12px;
 }
 .project-card:hover {
   /* background-color: rgba(0,0,0,0.7); */
@@ -24,11 +26,6 @@
 }
 
 .project-image {
-  /* flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* padding-top: 56.25%; */
   position:relative;
   width: 100%;
   padding-top: 60%;
@@ -47,17 +44,43 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin: 0;
   margin-top: 3px;
+  text-align: center;
+  align-items: center;
+  width: 100%;
 }
 .text h3 {
   color: white;
-  margin: 10px 0;
-  font-size: 1.2rem;
-  
+  margin: 12px 10px 8px 10px;
+  font-size: 1.15rem;
+  width: 100%;
+  text-align: center; 
 }
 .text p {
   color: white;
-  margin: 10px 0;
+  font-size: 0.95rem;
+  margin: 5px 0;
+  width: 100%;
+  text-align: center; 
+}
+.roles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 0;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.role {
+  background-color: #FED880;
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin: 0;
+  font-size: 0.8rem;
+  white-space: nowrap;
 }
 .keywords {
   display: flex;
@@ -69,7 +92,9 @@
 .keyword {
   /* background-color: #262622; */
   /* background-color: #C9D94E; */
-  background-color: rgba(201, 217, 78, 0.8);
+  /* background-color: #CEE397; */
+  /* background-color: #F8A460; */
+  background-color: rgb(200, 200, 200);
   /* color: white; */
   padding: 2px 8px;
   border-radius: 8px;
@@ -77,11 +102,36 @@
   font-size: 0.85rem;
   white-space: nowrap;
 }
-
+.link {
+  display: flex;
+  align-items: center;
+  position:absolute;
+  gap: 12px;
+  bottom: 6px;
+  right: 16px;
+}
+.link img:hover {
+  transform: scale(1.25);
+}
+.link img {
+  /* 배경색 제거, 아이콘 선 색상을 흰색으로 변경 */
+  background-color: transparent;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+.deploy {
+  width: 20px;
+  height: 20px;
+}
+.source {
+  width: 25px;
+  height: 25px;
+}
 @media (max-width: 768px) {
   .project-card {
-    min-height: 300px;
+    min-height: 280px;
     padding: 10px;
+    padding-bottom: 40px;
   }
   .text h3 {
     font-size: 1.1rem;
@@ -89,5 +139,9 @@
 
   .text p {
     font-size: 0.9rem;
+  }
+  .link {
+    bottom: 8px;
+    right: 8px;
   }
 }

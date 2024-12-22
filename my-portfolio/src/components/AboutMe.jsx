@@ -32,14 +32,14 @@ const AboutMe = () => {
           <h2>안녕하세요🙂</h2>
           <h2>프론트엔드 개발자를 꿈꾸는 박희원입니다.</h2>
           <div className='keywords'>
-            <p>체육교육과</p>
-            <p>비전공 파이썬</p>
-            <p>헬스케어</p>
-            <p>에듀테크</p>
+            <p className='major'>체육교육과</p>
+            <p className='learn'>비전공 파이썬</p>
+            <p className='interest'>헬스케어</p>
+            <p className='interest'>에듀테크</p>
           </div>
 
           <div className="contact-links">
-            <a href="https://github.com/heeeeeeeeeee1">
+            <a href="https://github.com/heeeeeeeeeee1" target="_blank" rel="noopener noreferrer">
               <img className='github' src={githubImg} alt="깃허브" />
             </a> 
             <a href="mailto:dino11814@gmail.com">

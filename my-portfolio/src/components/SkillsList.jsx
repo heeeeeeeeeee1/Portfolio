@@ -10,14 +10,14 @@ import reactImg from '../assets/React.svg'
 import './SkillsList.css'
 
 const skillsData = [
-  { name: 'Python', img: pythonImg, level: '그래프 탐색 알고리즘을 풀 수 있어요' },
-  { name: 'Javascript', img: jsImg, level: '프로젝트 경험이 여러번 있어요' },
-  { name: 'HTML', img: htmlImg, level: '프로젝트 경험이 여러번 있어요' },
-  { name: 'CSS', img: cssImg, level: '프로젝트 경험이 여러번 있어요' },
-  { name: 'Vue', img: vueImg, level: '프로젝트 경험이 있어요' },
-  { name: 'Django', img: djangoImg, level: '프로젝트 경험이 있어요' },
-  { name: 'React', img: reactImg, level: '자기소개 페이지를 만들어 봤어요.\n배우고 있는 단계입니다'},
-  { name: 'Figma', img: figmaImg, level: '화면설계서를 만들 수 있어요' }
+  { name: 'Javascript', img: jsImg, level: '프로젝트 경험이 여러번 있어요.' },
+  { name: 'HTML', img: htmlImg, level: '프로젝트 경험이 여러번 있어요.' },
+  { name: 'CSS', img: cssImg, level: '프로젝트 경험이 여러번 있어요.' },
+  { name: 'Python', img: pythonImg, level: '그래프 탐색 알고리즘을 풀 수 있어요.' },
+  { name: 'Vue', img: vueImg, level: '프로젝트 경험이 있어요.' },
+  { name: 'Django', img: djangoImg, level: '프로젝트 경험이 있어요.' },
+  { name: 'React', img: reactImg, level: '자기소개 페이지를 만들어 봤어요.\n배우고 있는 단계입니다.'},
+  { name: 'Figma', img: figmaImg, level: '화면설계서를 만들 수 있어요.' }
 ];
 
 const SkillsList = () => {
