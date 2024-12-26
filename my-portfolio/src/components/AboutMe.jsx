@@ -10,7 +10,7 @@ import Greeting from '../components/Greeting'
 
 const AboutMe = () => {
   return (
-    <div className="about-me-container">
+    <div className="about-me-container fade-in">
       <div className='about-me-content'>
         <div className='canvas-container'>
           <Canvas

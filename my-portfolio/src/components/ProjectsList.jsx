@@ -46,7 +46,7 @@ const ProjectsList = () => {
   ]
 
   return (
-    <div className="projects-container">
+    <div className="projects-container fade-in">
       <h2>Projects</h2>
       <div className="projects-list">
         {projects.map((project, index) => (

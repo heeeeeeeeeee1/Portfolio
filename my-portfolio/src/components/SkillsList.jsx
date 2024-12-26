@@ -24,7 +24,7 @@ const SkillsList = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null)
 
   return (
-    <div className="skills-container">
+    <div className="skills-container fade-in">
       <h2>Skills & Tools</h2>
       <div className="skills-list">
         {skillsData.map((skill, index)=>(
