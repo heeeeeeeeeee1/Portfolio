@@ -17,7 +17,7 @@ const skillsData = [
   { name: 'Vue', img: vueImg, level: '프로젝트 경험이 있어요.' },
   { name: 'Django', img: djangoImg, level: '프로젝트 경험이 있어요.' },
   { name: 'React', img: reactImg, level: '자기소개 페이지를 만들어 봤어요.\n배우고 있는 단계입니다.'},
-  { name: 'Figma', img: figmaImg, level: '화면설계서를 만들 수 있어요.' }
+  { name: 'Figma', img: figmaImg, level: '간단한 화면설계서를 만들 수 있어요.' }
 ];
 
 const SkillsList = () => {
@@ -38,7 +38,7 @@ const SkillsList = () => {
             {hoveredSkill === skill && (
               <div className='skill-popup'>
                 <h3>{skill.name}</h3>
-                <p>기술 수준: {skill.level}</p>
+                <p>{skill.level}</p>
               </div>
             )}
             </div>

@@ -12,10 +12,6 @@ a:visited {
   color: black; /* 클릭한 후에도 색상 유지 */
 }
 
-/* a:hover {
-  text-decoration: blink;
-} */
-
 a:active {
   color: inherit; /* 클릭할 때 색상 유지 */
 }
